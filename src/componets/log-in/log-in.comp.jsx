@@ -1,5 +1,5 @@
-import SingInForm from '../sign-in-fom/sing-in-form.component';
-import SingUpForm from '../sign-up-form/sing-up-form.component';
+import SingInForm from '../sign-in-fom/sing-in.comp';
+import SingUpForm from '../sign-up-form/sing-up.comp';
 import './log-in.styles.scss'
 
 const LogIn = () => {

@@ -1,12 +1,14 @@
-import { async } from '@firebase/util';
-import React, { useState } from 'react';
+import { useState } from 'react';
+
+import FormInput from '../form-input/form-input.component';
+import Button from '../button/button.component';
+
 import {
 	createAuthUserWithEmailAndPassword,
 	createUserDocumentFromAuth,
 } from '../../utils/firebase/firebase.utils';
-import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
-import './sign-up-form.styles.scss'
+
+import './sign-up-form.styles.scss';
 
 const defaultFormFields = {
 	displayName: '',
@@ -18,8 +20,6 @@ const defaultFormFields = {
 const SingUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultFormFields);
 	const { displayName, email, password, confirmPassword } = formFields;
-
-	console.log(formFields);
 
 	const resetFormFields = () => {
 		setFormFields(defaultFormFields);
@@ -58,7 +58,7 @@ const SingUpForm = () => {
 
 	return (
 		<div className='sign-up-container'>
-        <h2>Don't have an account</h2>
+			<h2>Don't have an account</h2>
 			<span>Sing up with your email and password</span>
 			<form onSubmit={handleSubmit}>
 				<FormInput
@@ -71,7 +71,7 @@ const SingUpForm = () => {
 				/>
 
 				<FormInput
-                    label='Email'
+					label='Email'
 					type='email'
 					onChange={handleChange}
 					name='email'
@@ -80,7 +80,7 @@ const SingUpForm = () => {
 				/>
 
 				<FormInput
-                    label='Password'
+					label='Password'
 					type='password'
 					onChange={handleChange}
 					name='password'
@@ -89,7 +89,7 @@ const SingUpForm = () => {
 				/>
 
 				<FormInput
-                    label='Confirm Password'
+					label='Confirm Password'
 					type='password'
 					onChange={handleChange}
 					name='confirmPassword'
