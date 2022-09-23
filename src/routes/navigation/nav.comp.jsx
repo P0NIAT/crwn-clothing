@@ -35,11 +35,10 @@ const Navigation = () => {
 							SIGN IN
 						</Link>
 					)}
-					<Link className='logo-container' to='/'>
-						<CardIcon className='logo' />
-					</Link>
+
+					<CardIcon />
 				</div>
-				{isCartOpen && <CartDropdown /> }
+				{isCartOpen && <CartDropdown />}
 			</div>
 			<Outlet />
 		</Fragment>
